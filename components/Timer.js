@@ -33,7 +33,7 @@ const Timer = (props) => {
             }
             setTimeLeft(startTimer);
             startTimer -= 1;
-        }, 1000 * 60);
+        }, 1000);
     }
 
     return (
@@ -45,8 +45,8 @@ export default Timer;
 
 const styles = StyleSheet.create({
     countdownTime: {
-        fontSize: 60,
+        fontSize: 100,
         color: '#ccc',
-        marginBottom: 80
+        // marginBottom: 100
     },
 });

@@ -22,10 +22,16 @@ export default function App() {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Meditatsiooni taimer</Text>
-            <StartButtons startTimer={startTimer} />
-            <Timer start={start} time={time} stopTimer={stopTimer} />
-            <View>
+            <View style={styles.titleContainer}>
+                <Text style={styles.title}>Meditatsiooni kestus:</Text>
+            </View>
+            <View style={styles.startButtonsContainer}>
+                <StartButtons startTimer={startTimer} />
+            </View>
+            <View style={styles.timerContainer}>
+                <Timer start={start} time={time} stopTimer={stopTimer} />
+            </View>
+            <View style={styles.operationButton}>
                 <TouchableOpacity onPress={stopTimer} style={styles.operationButtonContainer}>
                     <Text style={styles.buttonText}>Katkesta</Text>
                 </TouchableOpacity>
@@ -37,33 +43,44 @@ export default function App() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: '#5b6980',
         alignItems: 'center',
-        paddingTop: 130
+        paddingTop: 130,
+        flexDirection: 'column',
+    },
+    titleContainer: {
+        flex: 1
     },
     title: {
         color: '#ccc',
         fontWeight: 'bold',
         fontSize: 30,
-        marginBottom: 70
+    },
+    startButtonsContainer: {
+        flex: 2
     },
     buttonText: {
-        color: '#fff',
+        color: '#ccc',
         fontSize: 30,
         fontWeight: 'bold'
+    },
+    timerContainer: {
+        flex: 3
     },
     countdownTime: {
         fontSize: 60,
         color: '#ccc',
-        marginBottom: 80
+    },
+    operationButton: {
+        flex: 2
     },
     operationButtonContainer: {
-        backgroundColor: '#ccc',
+        backgroundColor: '#c77236',
         width: 240,
         display: 'flex',
         alignItems: 'center',
         borderRadius: 5,
         margin: 10,
-        padding: 10
+        padding: 10,
     }
 });
