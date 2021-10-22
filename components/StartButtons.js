@@ -31,11 +31,13 @@ const styles = StyleSheet.create({
         flexWrap: 'wrap'
     },
     startButtonContainer: {
-        width: 120,
+        width: 135,
         display: 'flex',
         alignItems: 'center',
         borderRadius: 5,
         backgroundColor: '#c77236',
+        marginBottom: 10,
+        marginRight: 5 
     },
     buttonText: {
         color: '#ccc',

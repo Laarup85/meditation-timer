@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { TouchableOpacity, StyleSheet, Text, View } from 'react-native';
+import Cancelbutton from './components/CancelButton';
 import StartButtons from './components/StartButtons';
 import Timer from './components/Timer';
 
@@ -31,10 +32,8 @@ export default function App() {
             <View style={styles.timerContainer}>
                 <Timer start={start} time={time} stopTimer={stopTimer} />
             </View>
-            <View style={styles.operationButton}>
-                <TouchableOpacity onPress={stopTimer} style={styles.operationButtonContainer}>
-                    <Text style={styles.buttonText}>Katkesta</Text>
-                </TouchableOpacity>
+            <View style={styles.cancelButton}>
+                <Cancelbutton stopTimer={stopTimer}/>
             </View>
         </View>
     );
@@ -57,7 +56,8 @@ const styles = StyleSheet.create({
         fontSize: 30,
     },
     startButtonsContainer: {
-        flex: 2
+        flex: 2,
+        margin: 'auto'
     },
     buttonText: {
         color: '#ccc',
@@ -71,16 +71,7 @@ const styles = StyleSheet.create({
         fontSize: 60,
         color: '#ccc',
     },
-    operationButton: {
+    cancelButton: {
         flex: 2
     },
-    operationButtonContainer: {
-        backgroundColor: '#c77236',
-        width: 240,
-        display: 'flex',
-        alignItems: 'center',
-        borderRadius: 5,
-        margin: 10,
-        padding: 10,
-    }
 });

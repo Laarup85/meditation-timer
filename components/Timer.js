@@ -1,10 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text } from 'react-native';
+import {Audio} from 'expo-av';
 
 let interval = () => { };
 
 const Timer = (props) => {
     const [timeLeft, setTimeLeft] = useState(0);
+
+    async function playSound() {
+        const { sound } = await Audio.Sound.createAsync(
+            require('../assets/ding.mp3')
+        );
+
+        await sound.playAsync();
+    }
 
     useEffect(() => {
         if (props.start) {
@@ -24,7 +33,9 @@ const Timer = (props) => {
         }
         interval = setInterval(() => {
             if (startTimer === 0) {
+                playSound();
                 clearInterval(interval);
+                props.stopTimer();
             }
             if (startTimer < 0) {
                 props.stopTimer();
