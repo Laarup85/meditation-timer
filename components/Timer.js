@@ -27,6 +27,7 @@ const Timer = (props) => {
     const setCountdown = (time) => {
         let startTimer = time;
         setTimeLeft(startTimer);
+        startTimer -= 1;
         dim(0.1);
         if (!time) {
             setTimeLeft(0);
@@ -64,6 +65,5 @@ const styles = StyleSheet.create({
     countdownTime: {
         fontSize: 100,
         color: '#ccc',
-        // marginBottom: 100
     },
 });
