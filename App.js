@@ -72,6 +72,6 @@ const styles = StyleSheet.create({
         color: '#ccc',
     },
     cancelButton: {
-        flex: 2
+        flex: 2,
     },
 });

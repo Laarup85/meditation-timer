@@ -42,6 +42,9 @@ const Timer = (props) => {
                 clearInterval(interval);
                 return;
             }
+            if (time  >= 20 && startTimer % 10 === 0) {
+                playSound();
+            }
             setTimeLeft(startTimer);
             startTimer -= 1;
         }, 1000);
