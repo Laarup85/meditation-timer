@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-import { TouchableOpacity, StyleSheet, Text, View } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 import Cancelbutton from './components/CancelButton';
 import StartButtons from './components/StartButtons';
 import Timer from './components/Timer';
+import dim from './lib/dimmer';
 
 export default function App() {
     const [start, setStart] = useState(false);
@@ -18,6 +19,7 @@ export default function App() {
     }
 
     const stopTimer = () => {
+        dim(1);
         setStart(false);
     }
 
@@ -33,7 +35,7 @@ export default function App() {
                 <Timer start={start} time={time} stopTimer={stopTimer} />
             </View>
             <View style={styles.cancelButton}>
-                <Cancelbutton stopTimer={stopTimer}/>
+                <Cancelbutton stopTimer={stopTimer} />
             </View>
         </View>
     );
