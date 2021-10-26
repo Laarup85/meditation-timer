@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, Text } from 'react-native';
+import { StyleSheet, Text, Vibration } from 'react-native';
 import { Audio } from 'expo-av';
 import dim from '../lib/dimmer';
 
@@ -38,6 +38,7 @@ const Timer = (props) => {
         interval = setInterval(() => {
             if (startTimer === 0) {
                 playSound();
+                Vibration.vibrate();
                 clearInterval(interval);
                 props.stopTimer();
             }
