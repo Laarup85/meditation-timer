@@ -4,6 +4,7 @@ import Cancelbutton from './components/CancelButton';
 import StartButtons from './components/StartButtons';
 import Timer from './components/Timer';
 import dim from './lib/dimmer';
+import { activateKeepAwake, deactivateKeepAwake } from 'expo-keep-awake';
 
 export default function App() {
     const [start, setStart] = useState(false);
@@ -16,11 +17,13 @@ export default function App() {
         }
         setStart(true);
         setTime(time);
+        activateKeepAwake();
     }
 
     const stopTimer = () => {
         dim(1);
         setStart(false);
+        deactivateKeepAwake();
     }
 
     return (
