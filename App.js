@@ -15,6 +15,7 @@ export default function App() {
             setStart(false);
             setTime(0);
         }
+        dim(0.1);
         setStart(true);
         setTime(time);
         activateKeepAwake();

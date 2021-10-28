@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, Vibration } from 'react-native';
 import { Audio } from 'expo-av';
-import dim from '../lib/dimmer';
 
 let interval = () => { };
 
@@ -28,12 +27,10 @@ const Timer = (props) => {
         let startTimer = time;
         setTimeLeft(startTimer);
         startTimer -= 1;
-        dim(0.1);
         if (!time) {
             setTimeLeft(0);
-            dim(1);
             clearInterval(interval);
-            return false;
+            return;
         }
         interval = setInterval(() => {
             if (startTimer === 0) {
@@ -41,18 +38,20 @@ const Timer = (props) => {
                 Vibration.vibrate();
                 clearInterval(interval);
                 props.stopTimer();
-            }
-            if (startTimer < 0) {
-                props.stopTimer();
-                clearInterval(interval);
                 return;
             }
+            // if (startTimer < 0) {
+            //     console.log('startTimer < 0');
+            //     props.stopTimer();
+            //     clearInterval(interval);
+            //     return;
+            // }
             if (time >= 20 && startTimer % 10 === 0) {
                 playSound();
             }
             setTimeLeft(startTimer);
             startTimer -= 1;
-        }, 1000 * 60);
+        }, 1000);
     }
 
     return (
