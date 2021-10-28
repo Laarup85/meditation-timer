@@ -40,18 +40,12 @@ const Timer = (props) => {
                 props.stopTimer();
                 return;
             }
-            // if (startTimer < 0) {
-            //     console.log('startTimer < 0');
-            //     props.stopTimer();
-            //     clearInterval(interval);
-            //     return;
-            // }
             if (time >= 20 && startTimer % 10 === 0) {
                 playSound();
             }
             setTimeLeft(startTimer);
             startTimer -= 1;
-        }, 1000);
+        }, 1000 * 60);
     }
 
     return (
