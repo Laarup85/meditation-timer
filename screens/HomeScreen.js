@@ -50,10 +50,9 @@ export default HomeScreen;
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#5b6980',
         alignItems: 'center',
-        paddingTop: 130,
         flexDirection: 'column',
+        paddingTop: 130
     },
     titleContainer: {
         flex: 1
