@@ -26,18 +26,17 @@ const styles = StyleSheet.create({
     startButtons: {
         flex: 1,
         flexDirection: 'row',
-        justifyContent: 'space-around',
-        width: '75%',
+        width: '80%',
         flexWrap: 'wrap'
     },
     startButtonContainer: {
-        width: 135,
+        width: 100,
         display: 'flex',
         alignItems: 'center',
         borderRadius: 5,
-        backgroundColor: '#c77236',
+        backgroundColor: '#3285a8',
         marginBottom: 10,
-        marginRight: 5 
+        marginRight: 10,
     },
     buttonText: {
         color: '#ccc',

@@ -29,9 +29,6 @@ const HomeScreen = () => {
 
     return (
         <View style={styles.container}>
-            <View style={styles.titleContainer}>
-                <Text style={styles.title}>Meditatsiooni kestus:</Text>
-            </View>
             <View style={styles.startButtonsContainer}>
                 <StartButtons startTimer={startTimer} />
             </View>
@@ -53,9 +50,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         flexDirection: 'column',
         paddingTop: 130
-    },
-    titleContainer: {
-        flex: 1
     },
     title: {
         color: '#ccc',

@@ -18,12 +18,12 @@ const styles = StyleSheet.create({
         fontWeight: 'bold'
     },
     cancelButtonContainer: {
-        backgroundColor: '#c77236',
-        width: 240,
+        backgroundColor: '#3285a8',
+        width: 210,
         display: 'flex',
         alignItems: 'center',
         borderRadius: 5,
-        margin: 10,
+        margin: 5,
         padding: 10,
     }
 });
