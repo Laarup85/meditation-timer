@@ -58,6 +58,6 @@ export default Timer;
 const styles = StyleSheet.create({
     countdownTime: {
         fontSize: 150,
-        color: '#ccc',
+        color: '#dde8ee',
     },
 });

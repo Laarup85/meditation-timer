@@ -13,12 +13,12 @@ export default Cancelbutton;
 
 const styles = StyleSheet.create({
     buttonText: {
-        color: '#ccc',
+        color: '#e7f2f8',
         fontSize: 30,
         fontWeight: 'bold'
     },
     cancelButtonContainer: {
-        backgroundColor: '#3285a8',
+        backgroundColor: '#74bdcb',
         width: 210,
         display: 'flex',
         alignItems: 'center',

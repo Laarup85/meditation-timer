@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import Cancelbutton from '../components/CancelButton';
 import StartButtons from '../components/StartButtons';
 import Timer from '../components/Timer';
@@ -51,19 +51,9 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         paddingTop: 130
     },
-    title: {
-        color: '#ccc',
-        fontWeight: 'bold',
-        fontSize: 30,
-    },
     startButtonsContainer: {
         flex: 2,
         margin: 'auto'
-    },
-    buttonText: {
-        color: '#ccc',
-        fontSize: 30,
-        fontWeight: 'bold'
     },
     timerContainer: {
         flex: 3
