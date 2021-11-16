@@ -26,21 +26,24 @@ const styles = StyleSheet.create({
     startButtons: {
         flex: 1,
         flexDirection: 'row',
-        width: '80%',
-        flexWrap: 'wrap'
+        alignItems: 'center',
+        justifyContent: 'center'
     },
     startButtonContainer: {
         width: 100,
         display: 'flex',
         alignItems: 'center',
-        borderRadius: 5,
+        justifyContent: 'center',
+        borderRadius: 100,
         backgroundColor: '#74bdcb',
         marginBottom: 10,
         marginRight: 10,
+        height: 60,
+        width: 60
     },
     buttonText: {
         color: '#e7f2f8',
-        fontSize: 40,
+        fontSize: 20,
         fontWeight: 'bold',
     },
 });

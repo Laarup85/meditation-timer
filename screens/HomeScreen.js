@@ -30,7 +30,7 @@ const HomeScreen = () => {
     return (
         <View style={styles.container}>
             <View style={styles.startButtonsContainer}>
-                <StartButtons startTimer={startTimer} />
+                <StartButtons startTimer={startTimer} style={styles.startButtons}/>
             </View>
             <View style={styles.timerContainer}>
                 <Timer start={start} time={time} stopTimer={stopTimer} />
@@ -48,21 +48,17 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
+        justifyContent: 'center',
         flexDirection: 'column',
-        paddingTop: 130
+        marginTop: 70
     },
     startButtonsContainer: {
-        flex: 2,
-        margin: 'auto'
+        flex: 1,
     },
     timerContainer: {
-        flex: 3
-    },
-    countdownTime: {
-        fontSize: 60,
-        color: '#ccc',
+        flex: 2
     },
     cancelButton: {
-        flex: 2,
+        flex: 1,
     },
 });
